@@ -19,7 +19,7 @@
 
 <body class="bg-gray-100 font-poppins">
     {{-- Navbar --}}
-    @include('components.header-guest')
+    @include('components.navbar-guest')
     <div class="pt-16"></div>
 
 
