@@ -11,42 +11,62 @@
         Utama
       </a>
 
-      <!-- Dropdown -->
-      <div class="relative" x-data="{ open: false }">
-        <button
-          @click="open = !open"class="text-black hover:text-primary hover:font-semibold relative after:content-[''] after:block after:w-0 after:h-1 after:bg-primary after:transition-all after:duration-300 hover:after:w-full font-poppins text-sm transition-colors">Profil Kampung
-          <svg class="w-4 h-4 ml-1 mt-px transition-transform" :class="{'rotate-180': open}" fill="none" stroke="currentColor" stroke-width="2"
-               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-
-        <!-- Dropdown menu -->
-        <div
-          x-show="open"
-          @click.away="open = false"
-          x-transition:enter="transition ease-out duration-100"
-          x-transition:enter-start="transform opacity-0 scale-95"
-          x-transition:enter-end="transform opacity-100 scale-100"
-          x-transition:leave="transition ease-in duration-75"
-          x-transition:leave-start="transform opacity-100 scale-100"
-          x-transition:leave-end="transform opacity-0 scale-95"
-          class="absolute bg-white shadow-xl rounded-lg mt-2 w-48 border border-gray-200 z-50"
+    <div class="relative" x-data="{ open: false }">
+      <button
+        @click="open = !open"
+        class="flex items-center text-black hover:text-primary hover:font-semibold font-poppins text-sm transition-colors"
+      >
+        <span
+          class="relative after:content-[''] after:block after:w-0 after:h-1 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+          :class="{'after:w-full': open}"
         >
-          <ul class="py-2 text-sm text-gray-700">
-            <li>
-              <a href="{{ route('ahli-jawatankuasa') }}" class="block px-4 py-3 hover:bg-linear-to-r hover:from-secondary hover:to-primary hover:text-white font-poppins text-sm transition-all rounded-md mx-1">
-                Ahli Jawatankuasa
-              </a>
-            </li>
-            <li>
-              <a href="{{ route('fasiliti') }}" class="block px-4 py-3 hover:bg-linear-to-r hover:from-secondary hover:to-primary hover:text-white font-poppins text-sm transition-all rounded-md mx-1">
-                Fasiliti
-              </a>
-            </li>
-          </ul>
-        </div>
+          Profil Kampung
+        </span>
+        <svg
+          class="w-4 h-4 ml-1 mt-0.5 transition-transform"
+          :class="{'rotate-180': open}"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+
+      <!-- Dropdown menu -->
+      <div
+        x-show="open"
+        @click.away="open = false"
+        x-transition:enter="transition ease-out duration-100"
+        x-transition:enter-start="transform opacity-0 scale-95"
+        x-transition:enter-end="transform opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-75"
+        x-transition:leave-start="transform opacity-100 scale-100"
+        x-transition:leave-end="transform opacity-0 scale-95"
+        class="absolute bg-white shadow-xl rounded-lg mt-2 w-48 border border-gray-200 z-50"
+      >
+        <ul class="py-2 text-sm text-gray-700">
+          <li>
+            <a
+              href="{{ route('ahli-jawatankuasa') }}"
+              class="block px-4 py-3 hover:bg-linear-to-r hover:from-secondary hover:to-primary hover:text-white font-poppins text-sm transition-all rounded-md mx-1"
+            >
+              Ahli Jawatankuasa
+            </a>
+          </li>
+          <li>
+            <a
+              href="{{ route('fasiliti') }}"
+              class="block px-4 py-3 hover:bg-linear-to-r hover:from-secondary hover:to-primary hover:text-white font-poppins text-sm transition-all rounded-md mx-1"
+            >
+              Fasiliti
+            </a>
+          </li>
+        </ul>
       </div>
+    </div>
 
       <a href="{{ route('aktiviti') }}" class="text-black hover:text-primary hover:font-semibold relative after:content-[''] after:block after:w-0 after:h-1 after:bg-primary after:transition-all after:duration-300 hover:after:w-full font-poppins text-sm transition-colors">
         Aktiviti
