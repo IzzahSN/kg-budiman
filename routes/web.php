@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GuestController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 // Guest Routes
@@ -12,5 +13,6 @@ Route::get('/budiman-biz-hub', [GuestController::class, 'budimanBizHub'])->name(
 Route::get('/hubungi-kami', [GuestController::class, 'hubungiKami'])->name('hubungi-kami');
 
 // Auth Routes
+Route::get('/login', [LoginController::class, 'login'])->name('login');
 
 // Admin Routes

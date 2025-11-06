@@ -25,7 +25,7 @@
           <li><a href="#" class="hover:text-gray-300">Aduan</a></li>
           <li><a href="{{ route('aktiviti') }}" class="hover:text-gray-300">Aktiviti</a></li>
           <li><a href="{{ route('budiman-biz-hub') }}" class="hover:text-gray-300">Budiman Biz Hub</a></li>
-          <li><a href="#" class="hover:text-gray-300">Pautan Admin</a></li>
+          <li><a href="{{ route('login') }}" class="hover:text-gray-300">Pautan Admin</a></li>
         </ul>
       </div>
 
