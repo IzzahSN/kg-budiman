@@ -79,8 +79,8 @@ Route::post('/admin/info-kampung/update/{id}', [InfoKampungController::class, 'u
 Route::get('/admin/info-kampung/edit/{id}', [InfoKampungController::class, 'edit'])->name('admin.info-kampung.edit');
 // Profil Management
 Route::get('/admin/profil', [ProfilController::class, 'index'])->name('admin.profil.index');
-Route::post('/admin/profil/update', [ProfilController::class, 'update'])->name('admin.profil.update');
-Route::get('/admin/profil/edit', [ProfilController::class, 'edit'])->name('admin.profil.edit');
+Route::post('/admin/profil/update/{id}', [ProfilController::class, 'update'])->name('admin.profil.update');
+Route::get('/admin/profil/edit/{id}', [ProfilController::class, 'edit'])->name('admin.profil.edit');
 // Admin Management
 Route::get('/admin/akses-admin', [AksesAdminController::class, 'index'])->name('admin.akses-admin.index');
 Route::get('/admin/akses-admin/create', [AksesAdminController::class, 'create'])->name('admin.akses-admin.create');
