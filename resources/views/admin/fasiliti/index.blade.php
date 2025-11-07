@@ -79,7 +79,7 @@
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">Padang yang di lengkapi dengan 2 set tiang gol dan rumput yang subur.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">https://maps.app.goo.gl/3oW4CZYR2sET5oxQ6</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                    <a href="{{ route('admin.ajk.edit', 1) }}" class="text-indigo-600 hover:text-indigo-900 mr-4">Edit</a>
+                                    <a href="{{ route('admin.fasiliti.edit', 1) }}" class="text-indigo-600 hover:text-indigo-900 mr-4">Edit</a>
                                     <form action="#" method="POST" class="inline">
                                         @csrf
                                         @method('DELETE')
