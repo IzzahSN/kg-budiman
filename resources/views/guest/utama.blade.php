@@ -7,7 +7,7 @@
         <div class="relative max-w-7xl mx-auto px-6 py-24 flex flex-col lg:flex-row items-center justify-between gap-10 text-white">
             
             <!-- Text Section -->
-            <div class="max-w-2xl">
+            <div class="max-w-2xl intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier">
             <h2 class="text-4xl md:text-5xl font-bold leading-tight">
                 <span class="text-white">Selamat Datang</span> ke<br />
                 <span class="text-white">Kampung Budiman</span>
@@ -38,7 +38,7 @@
             </div>
 
             <!-- Logo Card -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 lg:p-8 w-full max-w-sm">
+            <div class="bg-white rounded-2xl shadow-lg p-6 lg:p-8 w-full max-w-sm intersect:motion-preset-slide-left intersect:motion-ease-spring-bouncier">
             <img src="/images/jpkk.png" alt="JPKK Kampung Budiman" class="w-full h-auto" />
             </div>
 
@@ -50,7 +50,7 @@
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
             <!-- Left Content -->
-            <div>
+            <div class="intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier">
             <h2 class="text-5xl font-extrabold text-primary mb-6">PENGENALAN</h2>
 
             <p class="text-gray-700 leading-relaxed mb-4">
@@ -101,7 +101,7 @@
             </div>
 
             <!-- Right Image Grid -->
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 gap-4 intersect:motion-preset-slide-left intersect:motion-ease-spring-bouncier">
             <img src="/images/pengenalan-1.jpeg" alt="Kampung image 1" class="rounded-xl shadow-md object-cover w-full h-48 md:h-56" />
             <img src="/images/pengenalan-2.jpeg" alt="Kampung image 2" class="rounded-xl shadow-md object-cover w-full h-48 md:h-56" />
             <img src="/images/pengenalan-3.jpeg" alt="Kampung image 3" class="rounded-xl shadow-md object-cover w-full h-48 md:h-56" />
@@ -116,7 +116,8 @@
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
 
     <!-- Lokasi Kami -->
-    <div>
+    <div class="intersect:motion-preset-slide-right intersect:motion-ease-spring-bouncier"
+    >
       <h2 class="text-3xl font-extrabold text-primary mb-6 flex justify-center lg:text-left">
         LOKASI KAMI
       </h2>
@@ -146,7 +147,7 @@
     </div>
 
     <!-- Waktu Berurusan -->
-    <div>
+    <div class="intersect:motion-preset-slide-left intersect:motion-ease-spring-bouncier">
       <h2 class="text-3xl font-extrabold text-primary mb-6 flex justify-center lg:text-left">
         WAKTU BERURUSAN
       </h2>
