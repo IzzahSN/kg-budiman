@@ -77,7 +77,6 @@ Route::post('/admin/waktu-berurusan/delete/{id}', [WaktuBerurusanController::cla
 Route::post('/admin/info-kampung/update', [InfoKampungController::class, 'update'])->name('admin.info-kampung.update');
 Route::get('/admin/info-kampung/edit', [InfoKampungController::class, 'edit'])->name('admin.info-kampung.edit');
 // Profil Management
-Route::get('/admin/profil', [ProfilController::class, 'index'])->name('admin.profil.index');
 Route::post('/admin/profil/update/{id}', [ProfilController::class, 'update'])->name('admin.profil.update');
 Route::get('/admin/profil/edit/{id}', [ProfilController::class, 'edit'])->name('admin.profil.edit');
 // Admin Management
