@@ -11,6 +11,8 @@ Route::prefix('api')->group(function () {
     Route::controller(ajk::class)->group(function () {
         Route::get('/jawatan_kuasa', 'get_jawatan_kuasa');
         Route::post('/jawatan_kuasa', 'add_jawatan_kuasa');
+        Route::delete('/jawatan_kuasa/{id}', 'delete_jawatan_kuasa');
+        Route::patch('/jawatan_kuasa/{id}', 'update_jawatan_kuasa');
     });
 
     Route::controller(fasility::class)->group(function () {

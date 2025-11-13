@@ -21,21 +21,9 @@ class GuestController extends Controller
 	public function ahliJawatankuasa()
 	{
 		$members = CommitteeMember::orderBy('position')->orderBy('name')->get();
-
 		// Map to view-friendly arrays with resolved image URLs
 		$membersMapped = $members->map(function ($member) {
-			$imageUrl = null;
-			if (!empty($member->photo_path)) {
-				$path = trim($member->photo_path);
-				if (filter_var($path, FILTER_VALIDATE_URL) || strpos($path, 'http://') === 0 || strpos($path, 'https://') === 0) {
-					$imageUrl = $path;
-				} elseif (strpos($path, 'storage/') === 0 || strpos($path, 'public/') === 0) {
-					$imageUrl = Storage::url($path);
-				} else {
-					$imageUrl = asset($path);
-				}
-			}
-
+			$imageUrl = Storage::url($member->photo_path);
 			return [
 				'name' => $member->name,
 				'position' => $member->position,
