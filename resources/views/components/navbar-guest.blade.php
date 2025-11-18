@@ -1,7 +1,7 @@
 <nav class="bg-linear-to-r from-white to-gray-50 shadow-lg border-b border-gray-200 px-6 py-4" x-data="{ open: false, dropdownOpen: false }">
   <div class="flex flex-wrap items-center justify-between mx-auto max-w-7xl">
     <!-- Logo -->
-    <a href="#" class="flex items-center space-x-2 transition-transform hover:scale-105">
+    <a href="/" class="flex items-center space-x-2 transition-transform hover:scale-105">
       <img src="/images/jpkk ori.png" class="h-10 drop-shadow-sm" alt="Kampung Budiman Logo" />
     </a>
 
@@ -45,6 +45,11 @@
                 Fasiliti
               </a>
             </li>
+            <li>
+              <a href="{{ route('sejarah') }}" class="block px-4 py-3 hover:bg-linear-to-r hover:from-secondary hover:to-primary hover:text-white font-poppins text-sm transition-all rounded-md mx-1">
+                Sejarah
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -82,6 +87,9 @@
             </a>
             <a href="{{ route('fasiliti') }}" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 font-poppins text-sm">
               Fasiliti
+            </a>
+            <a href="{{ route('sejarah') }}" class="block px-8 py-2 text-gray-700 hover:bg-gray-100 font-poppins text-sm">
+              Sejarah
             </a>
           </div>
         </div>
