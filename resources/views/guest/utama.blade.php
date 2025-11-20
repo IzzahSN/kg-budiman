@@ -56,7 +56,7 @@
       @if($carouselAnnouncements->isNotEmpty())
         @php $slideCount = $carouselAnnouncements->count(); @endphp
         <div id="bulletin-carousel"
-          class="relative w-full max-w-full md:max-w-full lg:max-w-[1280px] mx-auto px-2 sm:px-3 md:px-2 lg:px-8 intersect:motion-preset-slide-up intersect:motion-duration-1200"
+          class="relative w-full max-w-full md:max-w-full lg:max-w-[1280px] mx-auto px-2 sm:px-3 md:px-2 lg:px-8 intersect:motion-preset-slide-right intersect:motion-duration-1200"
           x-data="{
             active: 0,
             total: {{ $slideCount }},
@@ -99,7 +99,8 @@
                 x-transition:leave="transition ease-in duration-500"
                 x-transition:leave-start="opacity-100"
                 x-transition:leave-end="opacity-0"
-                style="display: {{ $loop->first ? 'block' : 'none' }};"
+                x-cloak
+
                 aria-roledescription="slide"
                 aria-label="Buletin {{ $loop->iteration }} daripada {{ $slideCount }}">
                 <div class="absolute inset-0 overflow-hidden">
@@ -125,7 +126,7 @@
                       <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight mb-3 sm:mb-4">
                         {{ $announcement['title'] }}
                       </h2>
-                      <p class="text-slate-600 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6 whitespace-pre-line break-words overflow-visible">
+                      <p class="text-slate-600 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6 whitespace-pre-line wrap-break-word overflow-visible">
                         {{ $announcement['summary'] }}
                       </p>
                       <div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
