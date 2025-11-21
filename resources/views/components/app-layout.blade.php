@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
+<html lang="en" class="w-full min-h-dvh overflow-x-hidden" style="scroll-behavior: smooth;">
 
 <head>
     <meta charset="UTF-8">
@@ -18,16 +18,18 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gray-100 font-poppins">
-    {{-- Navbar --}}
-    @include('components.navbar-guest')
-    
-    {{-- Main Content --}}
-    <main>
-        {{ $slot }}
-    </main>
+<body class="bg-gray-100 font-poppins min-h-dvh m-0 overflow-x-hidden w-full">
+    <div class="flex flex-col min-h-dvh w-full">
+        {{-- Navbar --}}
+        @include('components.navbar-guest')
+        
+        {{-- Main Content --}}
+        <main class="flex-1 w-full">
+            {{ $slot }}
+        </main>
 
-    {{-- Footer --}}
-    @include('components.footer')
+        {{-- Footer --}}
+        @include('components.footer')
+    </div>
 </body>
 </html>
